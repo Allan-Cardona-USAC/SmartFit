@@ -11,29 +11,25 @@ const LoginForm = ({ onLogin }) => {
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
-      <Form.Group controlId="email">
-        <Form.Label>Email</Form.Label>
-        <Form.Control
-          type="email"
-          placeholder="Enter email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-      </Form.Group>
-      <Form.Group controlId="password">
-        <Form.Label>Password</Form.Label>
-        <Form.Control
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-      </Form.Group>
-      <Button variant="primary" type="submit">
-        Login
-      </Button>
-    </Form>
+   <Form onSubmit={handleSubmit}>
+        <Form.Group controlId="email">
+          <Form.Label style={{ color: 'blue' }}>Email</Form.Label>
+          <Form.Control
+            type="email"
+            placeholder="Enter email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)} />
+        </Form.Group>
+        <Form.Group controlId="password">
+          <Form.Label style={{ color: 'blue' }}>Password</Form.Label>
+          <Form.Control
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)} />
+        </Form.Group>
+        <Button variant="outline-success" type="submit">Login</Button>
+      </Form>
   );
 };
 

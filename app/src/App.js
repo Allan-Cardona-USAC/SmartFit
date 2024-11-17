@@ -2,16 +2,27 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
 import Dashboard from './pages/Dashboard';
+import Swal from 'sweetalert2';
 
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const handleLogin = (email, password) => {
     // Autenticación simulada
-    if (email === 'test@test.com' && password === 'password') {
+    if (email === 'admin@gmail.com' && password === 'admin') {
       setIsAuthenticated(true);
+      Swal.fire({
+        title: "Hello!",
+        text: "Bienvenido!",
+        icon: "success"
+      });
     } else {
-      alert('Invalid credentials');
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Introdusca las credenciales!",
+        footer: '<a href="#">más información?</a>'
+      });
     }
   };
 

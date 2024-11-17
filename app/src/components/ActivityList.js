@@ -6,10 +6,10 @@ const ActivityList = ({ activities }) => {
     <Table striped bordered hover>
       <thead>
         <tr>
-          <th>Type</th>
-          <th>Duration (min)</th>
-          <th>Distance (km)</th>
-          <th>Date</th>
+          <th>Deporte</th>
+          <th>Duracion (min)</th>
+          <th>Distancia (km)</th>
+          <th>Dato</th>
         </tr>
       </thead>
       <tbody>
